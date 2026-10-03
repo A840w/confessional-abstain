@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dt0swdr5564uf"]
+
+[ext_resource type="Script" uid="uid://bbmmuxg2hw6yw" path="res://components/npc/base_npc.gd" id="1_3lbqs"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8lcvq"]
+
+[node name="Node3D" type="Node3D" unique_id=1071467110]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=266126745]
+mesh = SubResource("CapsuleMesh_8lcvq")
+
+[node name="base_npc" type="Node3D" parent="." unique_id=718234354]
+script = ExtResource("1_3lbqs")

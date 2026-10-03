@@ -1,0 +1,16 @@
+~ start
+NPC: Bless you, my child. Speak your sins into the grate.
+- Forgive me, Father, for I have strayed. 
+	NPC: The path of righteousness is narrow. Tell me everything.
+	- I built my game architecture on a whim and now deadlines loom. => choices_deadline
+	- I stole extra communion wine. => choices_wine
+- I have nothing to confess today.
+	NPC: Then why sit in the box? Go forth and sin no more. => END
+
+~ choices_deadline
+NPC: Ah, technical debt—the ultimate penance. Code cleanly, and absolution shall be granted.
+=> END
+
+~ choices_wine
+NPC: Four hail marys and refactor your state machines immediately. 
+=> END
