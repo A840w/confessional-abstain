@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Theme" uid="uid://bhrg0k4kchplf" path="res://themes/dialogue.tres" id="2_i1ulw"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://jpl4vyah6045" path="res://resources/fonts/EB_Garamond/static/EBGaramond-Medium.ttf" id="3_gu7fn"]
 [ext_resource type="FontFile" uid="uid://55cgxnbhunbg" path="res://resources/fonts/EB_Garamond/static/EBGaramond-Regular.ttf" id="4_vj2n0"]
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
@@ -86,6 +87,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("3_gu7fn")
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -97,6 +100,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.9060448, 0.8482578, 0.9891395, 1)
 theme_override_fonts/normal_font = ExtResource("4_vj2n0")
+theme_override_font_sizes/normal_font_size = 40
 text = "your daughter will die tonightits already been set motion"
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=418507161]

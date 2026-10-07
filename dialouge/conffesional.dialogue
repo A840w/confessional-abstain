@@ -1,5 +1,5 @@
 ~ start
-NPC: Bless you, my child. Speak your sins into the grate.
+BANE: Bless you, my child. Speak your sins into the grate.
 - Forgive me, Father, for I have strayed. 
 	NPC: The path of righteousness is narrow. Tell me everything.
 	- I built my game architecture on a whim and now deadlines loom. => choices_deadline

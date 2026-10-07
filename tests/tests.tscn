@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://b3bvhk5gkuy4d"]
+
+[ext_resource type="Script" uid="uid://dnb53tkpt0gyq" path="res://tests/anim_mover.gd" id="1_rr61f"]
+[ext_resource type="Texture2D" uid="uid://byrjnty27ubrq" path="res://new2-editd.jpg" id="2_mlp16"]
+
+[sub_resource type="Animation" id="Animation_m3jpb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("top_bar:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bottom_bar:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1070, -0.25, 0, 0.25, 0, 1490, -0.00016666668, -70, 0, 0),
+"times": PackedFloat32Array(0, 0.001)
+}
+
+[sub_resource type="Animation" id="Animation_rr61f"]
+resource_name = "shutter"
+length = 3.0333333
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("top_bar:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(1, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -450, -0.5, -54, 0, 0),
+"times": PackedFloat32Array(0, 3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bottom_bar:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(1483, 0, 0, 0.50555557, 72.833336, 1920, -0.50555557, -44.833336, 0, 0),
+"times": PackedFloat32Array(0, 3.0333333)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlp16"]
+_data = {
+&"RESET": SubResource("Animation_m3jpb"),
+&"shutter": SubResource("Animation_rr61f")
+}
+
+[node name="control" type="Control" unique_id=819756779]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="New2Editd" type="Sprite2D" parent="." unique_id=1726061448]
+position = Vector2(1373.4236, 960.00006)
+scale = Vector2(0.6666667, 0.66666675)
+texture = ExtResource("2_mlp16")
+
+[node name="top_bar" type="ColorRect" parent="." unique_id=221222179]
+layout_mode = 1
+offset_right = 2754.0
+offset_bottom = 439.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="bottom_bar" type="ColorRect" parent="." unique_id=893081788]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -850.0
+offset_right = 2756.0
+offset_bottom = -411.00354
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=576462970]
+libraries/ = SubResource("AnimationLibrary_mlp16")
+
+[node name="animComponent" type="Node" parent="." unique_id=1347905775 node_paths=PackedStringArray("anim_player", "top_bar", "bottom_bar")]
+script = ExtResource("1_rr61f")
+anim_player = NodePath("../AnimationPlayer")
+top_bar = NodePath("../top_bar")
+bottom_bar = NodePath("../bottom_bar")
