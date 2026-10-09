@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://b4f156v7aay3"
+path="res://.godot/imported/conffesional.dialogue-5be13fc0d8113d99be3a564b8db49825.tres"
+
+[deps]
+
+source_file="res://core/utils/dialouge/dialogues/conffesional.dialogue"
+dest_files=["res://.godot/imported/conffesional.dialogue-5be13fc0d8113d99be3a564b8db49825.tres"]
+
+[params]
+
+defaults=true

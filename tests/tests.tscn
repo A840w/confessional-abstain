@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3bvhk5gkuy4d"]
 
+[ext_resource type="Texture2D" uid="uid://byrjnty27ubrq" path="res://assets/graphics/misc/new2-editd.jpg" id="1_mlp16"]
 [ext_resource type="Script" uid="uid://dnb53tkpt0gyq" path="res://tests/anim_mover.gd" id="1_rr61f"]
-[ext_resource type="Texture2D" uid="uid://byrjnty27ubrq" path="res://new2-editd.jpg" id="2_mlp16"]
 
 [sub_resource type="Animation" id="Animation_m3jpb"]
 length = 0.001
@@ -23,9 +23,9 @@ tracks/1/path = NodePath("bottom_bar:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(1070, -0.25, 0, 0.25, 0, 1490, -0.00016666668, -70, 0, 0),
-"times": PackedFloat32Array(0, 0.001)
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1070, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_rr61f"]
@@ -71,7 +71,7 @@ grow_vertical = 2
 [node name="New2Editd" type="Sprite2D" parent="." unique_id=1726061448]
 position = Vector2(1373.4236, 960.00006)
 scale = Vector2(0.6666667, 0.66666675)
-texture = ExtResource("2_mlp16")
+texture = ExtResource("1_mlp16")
 
 [node name="top_bar" type="ColorRect" parent="." unique_id=221222179]
 layout_mode = 1
