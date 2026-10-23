@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c2se4vevbtpx6"]
 
+[ext_resource type="Theme" uid="uid://daq3tbw4lo6js" path="res://assets/godot/themes/UI/menu.tres" id="1_wiuil"]
+
 [node name="Control" type="Control" unique_id=527915261]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2068116283]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_right = 104.0
+offset_bottom = 80.0
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1703815875]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 8
+
+[node name="play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1362911395]
+layout_mode = 2
+theme = ExtResource("1_wiuil")
+theme_override_colors/font_hover_color = Color(0.13682568, 0.13682568, 0.1368261, 1)
+text = "PLAY"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=825314243]
+layout_mode = 2
+
+[node name="settings" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1713162327]
+layout_mode = 2
+theme = ExtResource("1_wiuil")
+theme_override_colors/font_hover_color = Color(0.13682568, 0.13682568, 0.1368261, 1)
+text = "SETTINGS"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=862043005]
+layout_mode = 2
+
+[node name="support" type="Button" parent="MarginContainer/VBoxContainer" unique_id=596651769]
+layout_mode = 2
+theme = ExtResource("1_wiuil")
+theme_override_colors/font_hover_color = Color(0.13682568, 0.13682568, 0.1368261, 1)
+text = "SUPPORT"

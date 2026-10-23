@@ -23,9 +23,9 @@ tracks/1/path = NodePath("bottom_bar:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1070, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1070, -0.25, 0, 0.25, 0, 1481, -0.00016666666, -68.50001, 0, 0),
+"times": PackedFloat32Array(0, 0.0009999999)
 }
 
 [sub_resource type="Animation" id="Animation_rr61f"]
@@ -74,7 +74,7 @@ scale = Vector2(0.6666667, 0.66666675)
 texture = ExtResource("1_mlp16")
 
 [node name="top_bar" type="ColorRect" parent="." unique_id=221222179]
-layout_mode = 1
+layout_mode = 0
 offset_right = 2754.0
 offset_bottom = 439.0
 size_flags_horizontal = 3
@@ -87,9 +87,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = -17.0
-offset_top = -850.0
+offset_top = -10.0
 offset_right = 2756.0
-offset_bottom = -411.00354
+offset_bottom = 428.99658
 grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -103,3 +103,5 @@ script = ExtResource("1_rr61f")
 anim_player = NodePath("../AnimationPlayer")
 top_bar = NodePath("../top_bar")
 bottom_bar = NodePath("../bottom_bar")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1268117470]
