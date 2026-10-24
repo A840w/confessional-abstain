@@ -29,4 +29,3 @@ func change_state(new_state :String) -> void:
 		"NEW_GAME":
 			print("transitoning to game scene...")
 			get_tree().change_scene_to_file("res://levels/scenes/confessional.tscn")
-
