@@ -25,7 +25,9 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
+directories/dtl_directory={
+"timeline": "res://core/utils/timelines/timeline.dtl"
+}
 layout/style_directory={}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -67,8 +69,6 @@ runtime/balloon_path="res://core/utils/dialouge/ballons/balloon.tscn"
 
 [display]
 
-window/size/viewport_width=1545
-window/size/viewport_height=1080
 window/stretch/mode="viewport"
 window/description="a game abouut confessions"
 
