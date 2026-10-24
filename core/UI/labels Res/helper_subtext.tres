@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://mk75uf3gntwi"]
+
+[ext_resource type="FontFile" uid="uid://cwhvxw2ognjxl" path="res://assets/resources/fonts/Poppins/Poppins-Regular.ttf" id="1_xhral"]
+
+[resource]
+font = ExtResource("1_xhral")
+font_size = 31
+font_color = Color(0.7882353, 0.78039217, 0.7764706, 1)

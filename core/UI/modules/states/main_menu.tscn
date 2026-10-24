@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://c2se4vevbtpx6"]
+
+[ext_resource type="Script" uid="uid://b5mul1hvy7cvg" path="res://core/UI/ui_manager.gd" id="1_1gskx"]
+[ext_resource type="Script" uid="uid://cfk5b8pg3lfgs" path="res://core/UI/modules/main_menu_view.gd" id="2_cgv28"]
+[ext_resource type="LabelSettings" uid="uid://mk75uf3gntwi" path="res://core/UI/labels Res/helper_subtext.tres" id="3_cqn06"]
+[ext_resource type="LabelSettings" uid="uid://d1tvpao5250al" path="res://core/UI/labels Res/main_theme_logo.tres" id="4_78gya"]
+[ext_resource type="Theme" uid="uid://daq3tbw4lo6js" path="res://assets/godot/themes/UI/menu.tres" id="5_mf38m"]
+[ext_resource type="Script" uid="uid://b4rceypjx318x" path="res://core/UI/modules/menu_button_component.gd" id="6_8kg1w"]
+[ext_resource type="Script" uid="uid://dggdslbgwhens" path="res://core/UI/modules/main_menu_presenter.gd" id="7_bwlq6"]
+[ext_resource type="PackedScene" uid="uid://ckue4qacpc7nm" path="res://core/UI/modules/states/options_menu.tscn" id="8_f3s4y"]
+[ext_resource type="PackedScene" uid="uid://i5fhdcuqqrhp" path="res://core/UI/modules/states/bonuses_menu.tscn" id="9_ggvyo"]
+
+[node name="Control" type="Control" unique_id=527915261 node_paths=PackedStringArray("main_menu_state", "options_menu_state", "bonus_menu_state")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1gskx")
+main_menu_state = NodePath("Main Menu")
+options_menu_state = NodePath("OptionsMenu")
+bonus_menu_state = NodePath("BonusesMenu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=717077633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882354, 0.105882354, 0.105882354, 0.9647059)
+
+[node name="Main Menu" type="Control" parent="." unique_id=82334332 node_paths=PackedStringArray("description_label", "new_game_btn", "load_game_btn", "options_btn", "bonuses_btn")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_cgv28")
+description_label = NodePath("subport  margin/VBoxContainer/description")
+new_game_btn = NodePath("menu margin/VBoxContainer/play")
+load_game_btn = NodePath("menu margin/VBoxContainer/load game")
+options_btn = NodePath("menu margin/VBoxContainer/options")
+bonuses_btn = NodePath("menu margin/VBoxContainer/bonuses")
+
+[node name="subport  margin" type="MarginContainer" parent="Main Menu" unique_id=760100932]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 611.5
+offset_top = 864.0
+offset_right = 893.5
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 132
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/subport  margin" unique_id=226941551]
+layout_mode = 2
+
+[node name="description" type="Label" parent="Main Menu/subport  margin/VBoxContainer" unique_id=1915631392]
+layout_mode = 2
+text = "Start a New Game"
+label_settings = ExtResource("3_cqn06")
+
+[node name="title margin" type="MarginContainer" parent="Main Menu" unique_id=1509720722]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 425.5
+offset_right = 1079.5
+offset_bottom = 333.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 117
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/title margin" unique_id=254123447]
+z_index = 2
+layout_mode = 2
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="Label" type="Label" parent="Main Menu/title margin/VBoxContainer" unique_id=75174555]
+layout_mode = 2
+text = "CONFESSIONAL"
+label_settings = ExtResource("4_78gya")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Main Menu/title margin/VBoxContainer" unique_id=426361368]
+layout_mode = 2
+text = "ABSTAIN"
+label_settings = ExtResource("4_78gya")
+horizontal_alignment = 1
+
+[node name="menu margin" type="MarginContainer" parent="Main Menu" unique_id=2068116283]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 656.0
+offset_right = 826.0
+offset_bottom = 728.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 402
+theme_override_constants/margin_right = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main Menu/menu margin" unique_id=1703815875]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 27
+
+[node name="play" type="Button" parent="Main Menu/menu margin/VBoxContainer" unique_id=1362911395]
+layout_mode = 2
+theme = ExtResource("5_mf38m")
+theme_override_colors/font_color = Color(0.5529412, 0.5529412, 0.5529412, 1)
+text = "New Game"
+script = ExtResource("6_8kg1w")
+button_id = "new_game"
+
+[node name="playseprator" type="HSeparator" parent="Main Menu/menu margin/VBoxContainer" unique_id=825314243]
+visible = false
+layout_mode = 2
+
+[node name="load game" type="Button" parent="Main Menu/menu margin/VBoxContainer" unique_id=1713162327]
+layout_mode = 2
+theme = ExtResource("5_mf38m")
+theme_override_colors/font_color = Color(0.5529412, 0.5529412, 0.5529412, 1)
+text = "Load Game"
+script = ExtResource("6_8kg1w")
+button_id = "load_game"
+
+[node name="HSeparator2" type="HSeparator" parent="Main Menu/menu margin/VBoxContainer" unique_id=862043005]
+visible = false
+layout_mode = 2
+
+[node name="options" type="Button" parent="Main Menu/menu margin/VBoxContainer" unique_id=596651769]
+layout_mode = 2
+theme = ExtResource("5_mf38m")
+theme_override_colors/font_color = Color(0.5529412, 0.5529412, 0.5529412, 1)
+text = "Options"
+script = ExtResource("6_8kg1w")
+button_id = "options"
+
+[node name="bonuses" type="Button" parent="Main Menu/menu margin/VBoxContainer" unique_id=2142339277]
+layout_mode = 2
+theme = ExtResource("5_mf38m")
+theme_override_colors/font_color = Color(0.5529412, 0.5529412, 0.5529412, 1)
+text = "Bonuses
+"
+script = ExtResource("6_8kg1w")
+button_id = "bonuses"
+
+[node name="MainMenuPresenter" type="Node" parent="." unique_id=2047696765 node_paths=PackedStringArray("view")]
+script = ExtResource("7_bwlq6")
+view = NodePath("../Main Menu")
+
+[node name="OptionsMenu" parent="." unique_id=1491185193 instance=ExtResource("8_f3s4y")]
+layout_mode = 1
+
+[node name="BonusesMenu" parent="." unique_id=1396660183 instance=ExtResource("9_ggvyo")]
+layout_mode = 1

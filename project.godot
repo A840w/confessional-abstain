@@ -21,6 +21,7 @@ config/icon="uid://ca3stehqquehy"
 
 Audio="*uid://cujwm7u5pvogl"
 Dialogic="*uid://ds2q0uclmolvu"
+UiSignalBus="*uid://dg1t3v8ej4wxq"
 
 [dialogic]
 
@@ -69,6 +70,8 @@ runtime/balloon_path="res://core/utils/dialouge/ballons/balloon.tscn"
 
 [display]
 
+window/size/viewport_width=1545
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 window/description="a game abouut confessions"
 

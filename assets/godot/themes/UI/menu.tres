@@ -1,30 +1,17 @@
 [gd_resource type="Theme" format=3 uid="uid://daq3tbw4lo6js"]
 
-[ext_resource type="FontFile" uid="uid://ui6r2n22eo5u" path="res://assets/resources/fonts/EB_Garamond/static/EBGaramond-Bold.ttf" id="1_bkflv"]
+[ext_resource type="FontFile" uid="uid://55cgxnbhunbg" path="res://assets/resources/fonts/EB_Garamond/static/EBGaramond-Regular.ttf" id="1_bkflv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqbdh"]
-bg_color = Color(0.8992584, 0.8992584, 0.8992584, 0.6862745)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+bg_color = Color(0.8980392, 0.8980392, 0.8980392, 0)
+border_width_bottom = 2
 border_blend = true
 expand_margin_left = 3.0
 expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2acg5"]
-bg_color = Color(0.043039158, 0.04303915, 0.04303915, 0.6862745)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_blend = true
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtb02"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkflv"]
 bg_color = Color(0.043039158, 0.04303915, 0.04303915, 0.6862745)
@@ -40,9 +27,9 @@ expand_margin_bottom = 3.0
 
 [resource]
 Button/constants/h_separation = 4
-Button/constants/line_spacing = 6
-Button/font_sizes/font_size = 24
+Button/constants/line_spacing = 8
+Button/font_sizes/font_size = 38
 Button/fonts/font = ExtResource("1_bkflv")
 Button/styles/hover = SubResource("StyleBoxFlat_qqbdh")
-Button/styles/normal = SubResource("StyleBoxFlat_2acg5")
+Button/styles/normal = SubResource("StyleBoxEmpty_jtb02")
 Button/styles/pressed = SubResource("StyleBoxFlat_bkflv")

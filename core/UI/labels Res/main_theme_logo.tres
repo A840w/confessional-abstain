@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://d1tvpao5250al"]
+
+[ext_resource type="FontFile" uid="uid://ui6r2n22eo5u" path="res://assets/resources/fonts/EB_Garamond/static/EBGaramond-Bold.ttf" id="1_66vaq"]
+
+[resource]
+font = ExtResource("1_66vaq")
+font_size = 86

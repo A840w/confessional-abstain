@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://572ygu5rucmg"]
+
+[ext_resource type="Script" uid="uid://4qykapjbxtb" path="res://core/utils/helpers/sub_viewport.gd" id="1_otgbg"]
+[ext_resource type="PackedScene" uid="uid://c2se4vevbtpx6" path="res://core/UI/modules/states/main_menu.tscn" id="2_icsvd"]
+
+[node name="SubViewport" type="SubViewport" unique_id=1361606785 node_paths=PackedStringArray("viewport")]
+size = Vector2i(1545, 1080)
+size_2d_override_stretch = true
+script = ExtResource("1_otgbg")
+viewport = NodePath(".")
+
+[node name="Control" parent="." unique_id=527915261 instance=ExtResource("2_icsvd")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=386659056]
