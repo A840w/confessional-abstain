@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://yowa7vj1imm4"]
+
+[ext_resource type="Material" uid="uid://2nl28gvjaon0" path="res://assets/resources/img/materials/texture_02_white.tres" id="1_kbcnc"]
+[ext_resource type="Material" uid="uid://bcpatca8qkc1m" path="res://assets/resources/img/materials/texture_01_white.tres" id="1_y4qmx"]
+
+[node name="TestWorld" type="Node3D" unique_id=248032000]
+
+[node name="wall2" type="CSGBox3D" parent="." unique_id=1651596793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.155009, 1.3159617, -3.6718845)
+material_override = ExtResource("1_kbcnc")
+size = Vector3(0.1, 2.607544, 17.28331)
+
+[node name="wall3" type="CSGBox3D" parent="." unique_id=1038600997]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0099244, 1.3159617, 4.9271555)
+material_override = ExtResource("1_kbcnc")
+size = Vector3(0.1, 2.607544, 3.974823)
+
+[node name="wall" type="CSGBox3D" parent="." unique_id=18004283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8831916, 1.3159617, -3.745453)
+material_override = ExtResource("1_kbcnc")
+size = Vector3(0.1, 2.607544, 17.430447)
+
+[node name="roof" type="CSGBox3D" parent="." unique_id=952027562]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 3.4254432, 2.6108437, -3.850545)
+material_override = ExtResource("1_kbcnc")
+size = Vector3(0.1, 3.3891907, 17.808302)
+
+[node name="floor" type="CSGBox3D" parent="." unique_id=1760611366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012495518, 2.002716e-05, -0.0056934357)
+material_override = ExtResource("1_y4qmx")
+size = Vector3(30, 0.1, 30)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=11841175]
+transform = Transform3D(0.9994516, -0.0028597885, 0.032989986, 0, 0.99626374, 0.08636268, -0.033113707, -0.08631532, 0.99571735, 4.100695, 1.2310581, 3.4836502)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=514047751]
+operation = 2
+
+[node name="wall4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1082816210]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0099244, 1.3159617, 2.5496569)
+material_override = ExtResource("1_kbcnc")
+size = Vector3(0.1, 2.607544, 3.974823)
+
+[node name="cutter" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1999966979]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.036563, 1.2132721, 2.5576599)
+material_override = ExtResource("1_kbcnc")
+operation = 2
+size = Vector3(0.6730469, 0.71333593, 0.87)
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="." unique_id=512369842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.980703)
+operation = 2
+
+[node name="wall4" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1107065194]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.0099244, 1.3159617, 2.5496569)
+material_override = ExtResource("1_kbcnc")
+size = Vector3(0.1, 2.607544, 3.974823)
+
+[node name="cutter" type="CSGBox3D" parent="CSGCombiner3D2" unique_id=1177991304]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.036563, 1.2132721, 2.5576599)
+material_override = ExtResource("1_kbcnc")
+operation = 2
+size = Vector3(0.6730469, 0.71333593, 0.87)
