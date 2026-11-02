@@ -17,6 +17,10 @@ config/version="0.1.0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://ca3stehqquehy"
 
+[audio]
+
+driver/enable_input=true
+
 [autoload]
 
 Audio="*uid://cujwm7u5pvogl"
