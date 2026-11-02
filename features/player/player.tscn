@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://djdgvk5ai7jap"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8lcvq"]
+radius = 0.45
+height = 1.8
+
+[node name="Player" type="Node3D" unique_id=389240259]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2080842872]
+mesh = SubResource("CapsuleMesh_8lcvq")
