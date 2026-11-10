@@ -5,3 +5,4 @@ extends CanvasLayer
 func _ready() -> void:
 	# get_viewport().size = Vector2(2746, 1920)
 	pass
+	

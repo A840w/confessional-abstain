@@ -2,7 +2,6 @@
 .godot/
 /android/
 /addons/
-/demo/
-/blender/
-/exports/
-/assets/resources/
+assets/resources/img/materials
+assets/resources/img/textures
+assets/resources/fonts

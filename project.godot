@@ -81,7 +81,7 @@ window/description="a game abouut confessions"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/quick_audio/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gitot/plugin.cfg", "res://addons/quick_audio/plugin.cfg")
 
 [input]
 
