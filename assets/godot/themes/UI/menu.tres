@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b3f64fb9c0471ee3b3ccb3cd115e056920a3bcdee28c8070925f0eee96e79279
-size 1196
+[gd_resource type="Theme" format=3 uid="uid://daq3tbw4lo6js"]
+
+[ext_resource type="FontFile" uid="uid://55cgxnbhunbg" path="res://assets/resources/fonts/EB_Garamond/static/EBGaramond-Regular.ttf" id="1_bkflv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqbdh"]
+bg_color = Color(0.8980392, 0.8980392, 0.8980392, 0)
+border_width_bottom = 2
+border_blend = true
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtb02"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bkflv"]
+bg_color = Color(0.043039158, 0.04303915, 0.04303915, 0.6862745)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[resource]
+Button/constants/h_separation = 4
+Button/constants/line_spacing = 8
+Button/font_sizes/font_size = 38
+Button/fonts/font = ExtResource("1_bkflv")
+Button/styles/hover = SubResource("StyleBoxFlat_qqbdh")
+Button/styles/normal = SubResource("StyleBoxEmpty_jtb02")
+Button/styles/pressed = SubResource("StyleBoxFlat_bkflv")
