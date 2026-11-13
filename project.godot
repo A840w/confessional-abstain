@@ -26,6 +26,7 @@ driver/enable_input=true
 Audio="*uid://cujwm7u5pvogl"
 Dialogic="*uid://ds2q0uclmolvu"
 UiSignalBus="*uid://dg1t3v8ej4wxq"
+PhantomCameraManager="*uid://duq6jhf6unyis"
 
 [dialogic]
 
@@ -81,7 +82,7 @@ window/description="a game abouut confessions"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gitot/plugin.cfg", "res://addons/quick_audio/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gitot/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/quick_audio/plugin.cfg")
 
 [input]
 
